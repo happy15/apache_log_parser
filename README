@@ -1,0 +1,33 @@
+What's this?
+============
+This module is intent to parse the most common log pattern 
+for apache, nginx, etc.
+
+Here we got two implementations:
+1) use regex to parse the log, which is elegent, but slow
+2) use string split to parse the log, which is way faster then 1)
+
+How to use it?
+==============
+To parse a line of log, do:
+
+parse('123.126.50.69 - - [03/Jan/2012:00:00:02 +0800] ' +
+      '"GET /some/url/on/your/site HTTP/1.1" ' +
+      '200 5876 "-" ' +
+      '"User agent like Mozilla chrome or even spider(+http://www.spider.com/docs/help/webmasters.htm#07)"'))')
+or:
+fast_parse('123.126.50.69 - - [03/Jan/2012:00:00:02 +0800] ' +
+      '"GET /some/url/on/your/site HTTP/1.1" ' +
+      '200 5876 "-" ' +
+      '"User agent like Mozilla chrome or even spider(+http://www.spider.com/docs/help/webmasters.htm#07)"'))')
+
+Thanks to
+=========
+Inspired by https://github.com/watsonian/apache_log_parser
+and kennethreitz's concept of 'python for human'.
+
+Reach me at
+===========
+LUO Sheng
+sheng.peisi.luo@gmail.com
+@happy15sheng
